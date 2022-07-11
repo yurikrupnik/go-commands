@@ -8,12 +8,20 @@ before:
     # you may remove this if you don't need go generate
 #    - go generate ./...
 builds:
-  - env:
+  -
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
       - windows
       - darwin
+    hooks:
+      pre:
+        - first-script.sh
+        - second-script.sh
+      post:
+        - upx "{{ .Path }}"
+        - codesign -project="{{ .ProjectName }}" "{{ .Path }}"
 
 archives:
   - replacements:
