@@ -36,5 +36,5 @@ brews:
   -
     tap:
       owner: yurikrupnik/
-#      name: go-commands
-      name: homebrew-tap
+      name: go-commands
+#      name: homebrew-tap
