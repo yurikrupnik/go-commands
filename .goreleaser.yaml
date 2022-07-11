@@ -17,8 +17,9 @@ builds:
       - darwin
     hooks:
       pre:
-        - first-script.sh
-        - second-script.sh
+        - echo looks good
+#        - first-script.sh
+#        - second-script.sh
       post:
         - upx "{{ .Path }}"
         - codesign -project="{{ .ProjectName }}" "{{ .Path }}"
