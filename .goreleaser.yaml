@@ -35,6 +35,6 @@ changelog:
 brews:
   -
     tap:
-      owner: yurikrupnik/
+      owner: yurikrupnik
       name: go-commands
 #      name: homebrew-tap
