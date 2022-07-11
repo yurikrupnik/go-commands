@@ -5,20 +5,20 @@
 class GoCommands < Formula
   desc ""
   homepage ""
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.9/go-commands_0.0.9_Darwin_x86_64.tar.gz"
-      sha256 "99b6e4eaf4c21c4c312c33e5a54b303384f36b8350bee18d574df11251ad2eb5"
+    if Hardware::CPU.arm?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Darwin_arm64.tar.gz"
+      sha256 "bd64e46f24ae2ffd49876e722e74ce7b07c530403bfec68089a10ce6216b72a2"
 
       def install
         bin.install "go-commands"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.9/go-commands_0.0.9_Darwin_arm64.tar.gz"
-      sha256 "4bb5530d1d04243ab15118a823281eaa2bef7810bcf72c6ac9c0cc74dac67c42"
+    if Hardware::CPU.intel?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Darwin_x86_64.tar.gz"
+      sha256 "e147f1658760b68ac5c7ddc63d5574844170809fc4e3bdf50794ebeb7e2a524e"
 
       def install
         bin.install "go-commands"
@@ -28,16 +28,16 @@ class GoCommands < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.9/go-commands_0.0.9_Linux_arm64.tar.gz"
-      sha256 "1ca73e63056d4de5fc3a447d7828d5adebf15db88874362688de41312f4836b6"
+      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Linux_arm64.tar.gz"
+      sha256 "dcd41a8f37d2588689dbedef15acb23e6fc3c557edf53aca3db8ce5d768b9cd1"
 
       def install
         bin.install "go-commands"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.9/go-commands_0.0.9_Linux_x86_64.tar.gz"
-      sha256 "2f5fbefc5dc6556a848031002afe6c29b60c61c58a7688b5ddef434fc99d3a1c"
+      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Linux_x86_64.tar.gz"
+      sha256 "c9304cd8a359e2d4987fab194d991c85d0c87848433b21b84ee1c299659c9747"
 
       def install
         bin.install "go-commands"
