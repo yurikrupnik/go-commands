@@ -21,8 +21,9 @@ builds:
 #        - first-script.sh
 #        - second-script.sh
       post:
-        - upx "{{ .Path }}"
-        - codesign -project="{{ .ProjectName }}" "{{ .Path }}"
+        - echo post looks good
+#        - upx "{{ .Path }}"
+#        - codesign -project="{{ .ProjectName }}" "{{ .Path }}"
 
 archives:
   - replacements:
