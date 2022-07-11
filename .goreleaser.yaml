@@ -50,3 +50,7 @@ brews:
 #      name: homebrew-tap
 release:
   draft: true
+  header: |
+    ## Some title ({{ .Date }})
+
+    Welcome to this new release!
