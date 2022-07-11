@@ -48,3 +48,5 @@ brews:
       owner: yurikrupnik
       name: go-commands
 #      name: homebrew-tap
+release:
+  draft: true
