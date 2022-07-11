@@ -1,7 +1,11 @@
+/*
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import "fmt"
+import "github/yurikrupnik/go-commands/cmd"
 
 func main() {
-	fmt.Println("hello worl")
+	cmd.Execute()
 }

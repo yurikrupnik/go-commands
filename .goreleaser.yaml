@@ -6,7 +6,7 @@ before:
     # You may remove this if you don't use go modules.
     - go mod tidy
     # you may remove this if you don't need go generate
-    - go generate ./...
+#    - go generate ./...
 builds:
   - env:
       - CGO_ENABLED=0
@@ -32,3 +32,9 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+brews:
+  -
+    tap:
+      owner: yurikrupnik
+      name: go-commands
+#      name: homebrew-tap
