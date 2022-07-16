@@ -6,6 +6,7 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -35,7 +36,8 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-
+	uri := os.Getenv("MONGODB_URI")
+	log.Printf("uri %s\n", uri)
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
