@@ -20,8 +20,8 @@
 FROM alpine:latest
 WORKDIR /
 
-COPY --from=build /go-commands /go-commands
-#COPY ./fiber-mongo /fiber-mongo
+#COPY --from=build /go-commands /go-commands
+COPY ./go-commands /go-commands
 
 #EXPOSE 8080
 
