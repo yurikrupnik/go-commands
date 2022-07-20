@@ -1,5 +1,5 @@
 resources:
-  - jon.yaml
+  - job.yaml
 #  - deployment.yml
 #commonLabels:
 #  demo: profile-api-label
