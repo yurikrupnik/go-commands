@@ -1,15 +1,15 @@
-FROM golang:1.18-buster AS build
-
-WORKDIR /app
-
-ENV GOOS=linux
-ENV GOARCH=amd64
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
-COPY . .
-
-RUN go build -o /go-commands
+#FROM golang:1.18-buster AS build
+#
+#WORKDIR /app
+#
+#ENV GOOS=linux
+#ENV GOARCH=amd64
+#COPY go.mod ./
+#COPY go.sum ./
+#RUN go mod download
+#COPY . .
+#
+#RUN go build -o /go-commands
 
 ##
 ## Deploy
