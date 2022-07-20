@@ -57,3 +57,9 @@ release:
       break # Exit the Loop
     end
     Welcome to this new release!
+dockers:
+  -
+    image_templates:
+      - "yurikrupnik/{{ .ProjectName }}:{{ .Tag }}"
+    use: buildx
+    dockerfile: Dockerfile
