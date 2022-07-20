@@ -5,20 +5,20 @@
 class GoCommands < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.14"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Darwin_arm64.tar.gz"
-      sha256 "bd64e46f24ae2ffd49876e722e74ce7b07c530403bfec68089a10ce6216b72a2"
+    if Hardware::CPU.intel?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/v0.0.14/go-commands_0.0.14_Darwin_x86_64.tar.gz"
+      sha256 "cbfe35eafecd65c5738ed2210650c8d46962472fabddb17218da6a65e5106b36"
 
       def install
         bin.install "go-commands"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Darwin_x86_64.tar.gz"
-      sha256 "e147f1658760b68ac5c7ddc63d5574844170809fc4e3bdf50794ebeb7e2a524e"
+    if Hardware::CPU.arm?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/v0.0.14/go-commands_0.0.14_Darwin_arm64.tar.gz"
+      sha256 "d4ddbf4935c309c6860655ae0cdf0fda500caa22df84bf4eced6274c693c07af"
 
       def install
         bin.install "go-commands"
@@ -27,17 +27,17 @@ class GoCommands < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Linux_arm64.tar.gz"
-      sha256 "dcd41a8f37d2588689dbedef15acb23e6fc3c557edf53aca3db8ce5d768b9cd1"
+    if Hardware::CPU.intel?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/v0.0.14/go-commands_0.0.14_Linux_x86_64.tar.gz"
+      sha256 "c24e0cf7728925de0e6510a56077a4ac1207fb6a318e03e01e4ccce956da4a8f"
 
       def install
         bin.install "go-commands"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yurikrupnik/go-commands/releases/download/0.0.10/go-commands_0.0.10_Linux_x86_64.tar.gz"
-      sha256 "c9304cd8a359e2d4987fab194d991c85d0c87848433b21b84ee1c299659c9747"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yurikrupnik/go-commands/releases/download/v0.0.14/go-commands_0.0.14_Linux_arm64.tar.gz"
+      sha256 "98bef5426b5c9be3504af6c7275c42baee5ae76f9459fe3c9032f7f92b6e2426"
 
       def install
         bin.install "go-commands"
