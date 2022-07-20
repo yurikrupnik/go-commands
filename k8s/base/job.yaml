@@ -30,7 +30,7 @@ spec:
         spec:
           containers:
             - name: yurikrupnik/go-commands
-              image: yurikrupnik/go-commands:latest
+              image: yurikrupnik/go-commands:v0.0.14
               imagePullPolicy: IfNotPresent
               command:
                 - /bin/sh
