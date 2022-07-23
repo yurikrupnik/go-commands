@@ -37,3 +37,30 @@ spec:
                 - -c
                 - /go-commands
           restartPolicy: OnFailure
+
+---
+#apiVersion: batch/v1
+#kind: CronJob
+#metadata:
+#  name: wrk
+#spec:
+#  schedule: "* * * * *"
+#  jobTemplate:
+#    spec:
+#      template:
+#        spec:
+#          containers:
+#            - name: wrk
+#              image: wrk
+#              imagePullPolicy: IfNotPresent
+#              command: ["wrk"]
+#              args:
+#                - "-t12"
+#                - "-c400"
+#                - "-d30s"
+#          restartPolicy: OnFailure
+
+#  - name: wrk
+#      image: yurikrupnik/wrk-m1
+#      command: [ 'wrk' ]
+#      args: [ "-t12", "-c400", "-d30s", {{ include "my-nginx.fullname" . }}:{{ .Values.service.port }}/hello' ]
